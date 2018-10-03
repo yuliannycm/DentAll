@@ -22,7 +22,7 @@ class UsersTableSeeder extends Seeder
                 'apellido'     => 'Bastidas',
                 'email'        => 'eduarbastidas10@gmail.com',
                 'password'     => bcrypt('secreto'),
-                'telefono'     => '04160253340',
+                'telefono'     => '04165555555',
                 'cargo'        => 'DOCTOR',
             ]);
 

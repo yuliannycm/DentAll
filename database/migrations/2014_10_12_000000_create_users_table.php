@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -18,7 +18,7 @@ class CreateUsersTable extends Migration
             $table->integer('cedula')->unique();
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('password');
             $table->string('telefono')->nullable();
             $table->enum('cargo', ['DOCTOR', 'ASISTENTE'])->nullable();
