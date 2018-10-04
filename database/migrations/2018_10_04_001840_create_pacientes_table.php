@@ -15,13 +15,14 @@ class CreatePacientesTable extends Migration
     {
         Schema::create('pacientes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellido');
+            $table->string('nombres');
+            $table->string('apellidos');
             $table->integer('cedula')->unique();
             $table->string('email')->unique();
             $table->string('telefono')->nullable();
             $table->string('direccion');
             $table->enum('tipo_consulta', ['NORMAL', 'EMERGENCIA']);
+            $table->string('descripcion_consulta', 300)->nullable();
             $table->timestamps();
         });
     }

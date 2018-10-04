@@ -7,7 +7,6 @@
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'),
   url(../fonts/materialicons.woff2) format('woff2'),
-  url('../fonts/materialicons.woff') format('woff');
 }
 .material-icons {
   font-family: 'Material Icons';
@@ -20,7 +19,7 @@
   display: inline-block;
   word-wrap: normal;
 
-  font-feature-settings: 'liga'; // !!! make sure this is set !!!
+  font-feature-settings: 'liga';
   -webkit-font-feature-settings: 'liga';  
   -webkit-font-smoothing: antialiased;
 }

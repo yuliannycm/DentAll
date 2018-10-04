@@ -18,19 +18,20 @@ class UsersTableSeeder extends Seeder
 
             DB::table('usuarios')->insert([
             	'cedula'       => 23954745,
-                'nombre'       => 'Eduar',
-                'apellido'     => 'Bastidas',
+                'nombres'       => 'Eduar',
+                'apellidos'     => 'Bastidas',
                 'email'        => 'eduarbastidas10@gmail.com',
-                'password'     => bcrypt('secreto'),
+                'password'     => bcrypt('secret'),
                 'telefono'     => '04165555555',
                 'cargo'        => 'DOCTOR',
             ]);
 
+            $faker = Faker::create('es_PE');
             for ($i = 0; $i < 5; $i++) {
-                $faker = Faker::create('es_PE');
+                
                 DB::table('pacientes')->insert([
-                'nombre'       => $faker->firstName,
-                'apellido'     => $faker->lastName,
+                'nombres'       => $faker->firstName,
+                'apellidos'     => $faker->lastName,
                 'cedula'       => $faker->unique()->randomNumber($nbDigits = 8),
                 'email'        => $faker->email,
                 'telefono'     => $faker->phoneNumber,
